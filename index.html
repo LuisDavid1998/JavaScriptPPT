@@ -15,11 +15,11 @@
       <img id="title" src="img/logo.svg" alt="Rock, Paper, Scissors">
       <div id="pc-score" class="score">
         <h3>PC SCORE</h3>
-        <p id="pc-number" class="number">10</p>
+        <p id="pc-number" class="number">0</p>
       </div>
       <div id="my-score" class="score">
         <h3>MY SCORE</h3>
-        <p id="my-number" class="number">10</p>
+        <p id="my-number" class="number">0</p>
       </div>
     </header>
     <main>
@@ -39,20 +39,20 @@
       <div id="game">
         <div class="select">
           <H2>YOU PICKED</H2>
-          <div class="game-select rock">
+          <div class="game-select op1">
             <img src="img/icon-rock.svg" alt="Selection User">
           </div>
         </div>
         <div class="select">
           <h2>THE HOUSE PICKED</h2>
-          <div class="game-select paper">
+          <div class="game-select op2">
             <img src="img/icon-paper.svg" alt="Selection PC">
           </div>
         </div>
       </div>
 
       <div id="win-lose">
-        <h3>YOU LOSE</h3>
+        <h3></h3>
         <button class="play-again">PLAY AGAIN</button>
       </div>
 
@@ -63,9 +63,12 @@
         </div>
           <img class="content-rules" src="img/image-rules.svg" alt="Rock, Paper, Scissors Rules"> 
       </div>
+
+
       
     </main>
     <button id="rules-button">RULES</button>
+    <button id="reset-button">RESET</button>
     <!--
     <footer id="footer">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -73,7 +76,8 @@
     </footer>
     -->
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>   
   </div>
   
 </body>

@@ -82,14 +82,14 @@ body {
   transform: scale(1.1);
 }
 #container #game {
-  width: 60%;
+  width: 100%;
   margin: 100px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   display: none;
 }
 #container #game .select {
-  width: 50%;
+  width: 25%;
 }
 #container #game .select h2 {
   color: white;
@@ -197,12 +197,32 @@ body {
   border-radius: 10px;
   font-size: 17px;
   position: absolute;
-  right: 40px;
-  bottom: 40px;
   cursor: pointer;
   transition: all 700ms ease;
+  right: 40px;
+  bottom: 40px;
 }
 #container #rules-button:hover {
+  background: lightgrey;
+  color: blue;
+}
+#container #reset-button {
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 17px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 700ms ease;
+  left: 40px;
+  bottom: 40px;
+}
+#container #reset-button:hover {
   background: lightgrey;
   color: blue;
 }

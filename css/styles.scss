@@ -11,6 +11,24 @@ body{
     padding: 20px;
     border-radius: 15px;
 }
+@mixin Buttons(){
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 17px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 700ms ease;
+}
+@mixin ButtonsHover(){
+    background: lightgrey;
+    color: blue;
+}
 #container{
     width: 100%;
     height: 100%;
@@ -92,14 +110,14 @@ body{
     }
 
     #game{
-        width: 60%;
+        width: 100%;
         margin: 100px auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         display: none;                          ///////
 
         .select{
-            width: 50%;
+            width: 25%;
 
             h2{
                 color: white;
@@ -210,24 +228,20 @@ body{
     }
 
     #rules-button{
-        color: white;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 10px;
-        font-size: 17px;
-        position: absolute;
+        @include Buttons();
         right: 40px;
         bottom: 40px;
-        cursor: pointer;
-        transition: all 700ms ease;
     }
     #rules-button:hover{
-        background: lightgrey;
-        color: blue;
+        @include ButtonsHover();
+    }
+    #reset-button{
+        @include Buttons();
+        left: 40px;
+        bottom: 40px;
+    }
+    #reset-button:hover{
+        @include ButtonsHover();
     }
     
 }
