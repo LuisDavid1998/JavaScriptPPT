@@ -70,14 +70,18 @@ var score_user = 0;
 var score_pc = 0;
 
 function WinLose(gameWL){
-    win_lose.show();
+    win_lose.show('slow');
     game.css('justify-content', 'space-evenly');
     you.html(`YOU ${gameWL}`);
 
     if(gameWL == 'WIN'){
         score_user++;
+        you.css('color', '#289B1F');
     }else if(gameWL == 'LOSE'){
         score_pc++;
+        you.css('color', '#BF2C18');
+    }else{
+        you.css('color', '#B718BF');
     }
     pc_number.html(`${score_pc}`);
     my_number.html(`${score_user}`);
@@ -85,9 +89,9 @@ function WinLose(gameWL){
 
 const play_again = $('.play-again');
 play_again.click(() => {
-    win_lose.hide();
-    game.hide();
-    selection.show();
+    win_lose.hide('fast');
+    game.hide('fast');
+    selection.show('slow');
     op1.removeClass('rock paper scissors');
     op2.removeClass('rock paper scissors');
 });
